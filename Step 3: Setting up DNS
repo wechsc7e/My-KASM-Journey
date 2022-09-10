@@ -15,4 +15,4 @@ To do this, set up another "A" record with name "proxy" but this time the IPv4 a
 Finally, we will force all traffic to your domain to use SSL by going into the SSL/TLS tab and clicking on Edge Certificates.  In this menu turn on the setting
 for "Always use HTTPS"
 
-The next section will show youo how to put this all together and configure NGINX Proxy Manager.
+The next section will show you how to put this all together and configure NGINX Proxy Manager.
