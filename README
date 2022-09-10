@@ -3,4 +3,5 @@ For my first project, I wanted to set up a secure, SSL encypted from end-to-end,
 To do this, I used Linode to set up two servers, one to run NGINX Proxy Manger and another to host my production KASM instance.
 It took a while, with the help of YouTube and online forums, to navigate the challenges in making this happen and my hope is to make it easier on someone else.
 
-See attached files and explanations to show how each should be applied and installation steps.
+See attached files and explanations to show how each should be applied and installation steps. Please use common sense in securing your servers before
+using anything in a production environment (ex. Run Update/Upgrade in package manager to make sure all is up to date, etc...)
