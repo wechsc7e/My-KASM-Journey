@@ -11,7 +11,7 @@ Don't mess with "Custom Locations"
 For the SSL tab, use the dropdown to select "Request a New SSL Certificate" and check off the boxes for "Force SSL" and "HTTP2 Support"
 
 Click save and give it a minute to use Let's Encrypt to issue an SSL certificate for the domain.  This will cover your entire domain (example.com) at
-this point and any pages you create on your web server will be encrypted under SSL and NPM will handle auto newing the certificate.
+this point and any pages you create on your web server will be encrypted under SSL and NPM will handle auto renewing the certificate.
 
 ------------------------
 Securing NPM Admin Page
