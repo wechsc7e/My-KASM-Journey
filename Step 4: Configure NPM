@@ -34,4 +34,4 @@ You will now have a proxy server for "example.com" and "proxy.example.com"
 You have the option of using "kasm.example.com:8443" or "example.com:8443" to access the secure version of your KASM instance and you can use
 "proxy.example.com" to directly access your NPM admin panel.
 
-And you're done
+And you're done, don't forget to take a snapshot of your servers once they are stable!
