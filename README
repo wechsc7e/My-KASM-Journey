@@ -15,7 +15,7 @@ Note on Linode Servers used:
 For KASM to run properly, I purchased a shared CPU VM with 4 GB of RAM and 80 GiB of storage since KASM requires at least 50 GiB of storage
 costwise, this will set you back about $20 a month, with and additional $5 for optional backup which I highly advise you get. This backup
 allows you to create snapshots of your server along the way as you reach stable checkpoints. Trust me, you will mess up and have to revert
-back to a previous snapshot, I did it plenty.
+back to a previous snapshot, I did it plenty.  I run Ubuntu 22.04 LTS on both servers and the commands I show you will reflect that.
 
 For the 2nd server, for NGINX Proxy Manager, I opted for a scaled down shared CPU VM with 2 GiB of RAM and 50 Gib of storage for $10 a month 
 but you can most likely get away with less.
