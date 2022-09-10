@@ -9,3 +9,17 @@ using anything in a production environment (ex. Run Update/Upgrade in package ma
 Please also note that in order to obtain a valid SSL certificate through NGINX Proxy Manager, you must own a domain name and have access to the DNS
 Management options to create the appropriate "A" records allowing for proper forwarding. I personally used GoDaddy to purchase my domain name but
 I transferred the nameservers to be managed through Cloudflare which is free to use and pretty straightforawrd.
+
+-----------------------------
+Note on Linode Servers used:
+-----------------------------
+For KASM to run properly, I purchased a shared CPU VM with 4 GB of RAM and 80 GiB of storage since KASM requires at least 50 GiB of storage
+costwise, this will set you back about $20 a month, with and additional $5 for optional backup which I highly advise you get. This backup
+allows you to create snapshots of your server along the way as you reach stable checkpoints. Trust me, you will mess up and have to revert
+back to a previous snapshot, I did it plenty.
+
+For the 2nd server, for NGINX Proxy Manager, I opted for a scaled down shared CPU VM with 2 GiB of RAM and 50 Gib of storage for $10 a month 
+but you can most likely get away with less.
+
+If you do decide to use Linode, you can try it with a $100 credit for 60 days to see if you like it so this project will pretty much cost you nothing
+for 2 months of use which is pretty nice.
