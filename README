@@ -5,3 +5,7 @@ It took a while, with the help of YouTube and online forums, to navigate the cha
 
 See attached files and explanations to show how each should be applied and installation steps. Please use common sense in securing your servers before
 using anything in a production environment (ex. Run Update/Upgrade in package manager to make sure all is up to date, etc...)
+
+Please also note that in order to obtain a valid SSL certificate through NGINX Proxy Manager, you must own a domain name and have access to the DNS
+Management options to create the appropriate "A" records allowing for proper forwarding. I personally used GoDaddy to purchase my domain name but
+I transferred the nameservers to be managed through Cloudflare which is free to use and pretty straightforawrd.
