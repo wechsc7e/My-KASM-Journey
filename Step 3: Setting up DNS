@@ -1,0 +1,18 @@
+As I said before, I bought my domain name, let's call it example.com, from GoDaddy and transferred the nameservers to Cloudflare.  This means that I have to use
+Cloudflare to manage my DNS and set up subdomains and the process that I will explain to you shouldn't vary too much between DNS providors...
+
+First we have to create an "A" record in the DNS management screen with the name "example.com" and the IPv4 address being the IP address of the server that you 
+set up KASM on (not NPM) and make sure the proxy switch is turned on. Save the record.
+
+Set up another "A" record pointing to name "www" using the IP address of your KASM server again. Save the record.
+
+Set up another "A" record as name "kasm" this time (creating kasm.example.com) using the IP address of your KASM server again. Save the record. 
+
+Next we will set up a subdomain pointing to the NPM admin panel so you can access it from the same domain even though it is on another server (ex. proxy.example.com).
+To do this, set up another "A" record with name "proxy" but this time the IPv4 address will be the IP address for the server you set up NPM on. Don't worry about port
+81 yet, we'll deal with that in NPM. Save the record.
+
+Finally, we will force all traffic to your domain to use SSL by going into the SSL/TLS tab and clicking on Edge Certificates.  In this menu turn on the setting
+for "Always use HTTPS"
+
+The next section will show youo how to put this all together and configure NGINX Proxy Manager.
