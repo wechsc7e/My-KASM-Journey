@@ -27,3 +27,4 @@ Once the installation is complete, you can access your web interface at https://
 You will notice that the SSL certificate is being shown as invalid since the KASM installation uses a self signed certificate.
 This doesn't mean that your traffic is unencryped but it is insecure by nature and can be open to Man in the Middle attacks so
 we'll fix this with Let's Encrypt and NGINX Proxy manager.
+ 
