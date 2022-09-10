@@ -1,2 +1,29 @@
 This one can be a little tricky, as it is installed as a Docker container which means you have to install Docker on your server first.
 
+-----------------
+To Install Docker
+-----------------
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
+
+This is the best tutorial I can offer you to walk you through the Docker Installation. Once you have Docker installed per the tutorial,
+you will also want to install the Docker Compose Plugin to compile the .yml setup files for tou NPM installation:
+
+$sudo apt-get update
+$sudo apt-get install docker-compose-plugin
+
+Verify Installation and Version
+$docker compose version
+
+At this point I highly advise you to take a snapshot of your server before moving onto installing NPM
+
+------------------------------
+To Install NGINX Proxy Manager
+------------------------------
+https://www.vultr.com/docs/how-to-install-nginx-proxy-manager-on-ubuntu-20-04-18428/
+
+This is also the best tutorial that I can offer you and it walks you through the installation of SQLlite3 which is a prerequisite
+for installing NPM and stores its data.
+
+Again, I highly advise you take a snapshot of your current server state once everything is set up and stable.
+
+Don't forget to change the default user name and password!
