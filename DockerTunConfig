@@ -1,0 +1,10 @@
+{
+    "hostname":"kasm",
+    "user":"root",
+    "privileged" : true,
+    "devices":
+        [
+            "/dev/input/event0:/dev/input/event0:rwm",
+            "/dev/net/tun:/dev/net/tun:rwm"
+        ]
+}
