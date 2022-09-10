@@ -1,0 +1,29 @@
+https://kasmweb.com/docs/latest/install/single_server_install.html
+-----------------
+
+When following the instructions for installing KASM, it is very important to create the swap image for stability before going any further,
+even going above and beyond by making the swap image 2 GiB if your server can handle it:
+
+$sudo dd if=/dev/zero bs=1M count=2048 of=/mnt/2GiB.swap
+$sudo chmod 600 /mnt/2GiB.swap
+$sudo mkswap /mnt/2GiB.swap
+$sudo swapon /mnt/2GiB.swap
+$echo '/mnt/2GiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
+
+--------------
+Reverse Proxy
+--------------
+To reach my end-to-end encryption goal, it was important to run the web application on port 8443 to keep 443 open to my reverse proxy.
+After following the instructions to download and unzip the KASM files, use the following command to install and listen on port 8443:
+
+$sudo bash kasm_release/install.sh -L 8443
+
+This will allow for port forwarding with NGINX proxy manager, which we will install on its own server later.
+
+------------------
+
+Once the installation is complete, you can access your web interface at https://<serverip>:8443
+
+You will notice that the SSL certificate is being shown as invalid since the KASM installation uses a self signed certificate.
+This doesn't mean that your traffic is unencryped but it is insecure by nature and can be open to Man in the Middle attacks so
+we'll fix this with Let's Encrypt and NGINX Proxy manager
