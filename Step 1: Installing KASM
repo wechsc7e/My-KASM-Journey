@@ -13,7 +13,7 @@ $echo '/mnt/2GiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
 --------------
 Reverse Proxy
 --------------
-To reach my end-to-end encryption goal, it was important to run the web application on port 8443 to keep 443 open to my reverse proxy.
+To reach my end-to-end encryption goal, it was important to run the web application on port 8443 to keep 443 open for NGINX Proxy Manager.
 After following the instructions to download and unzip the KASM files, use the following command to install and listen on port 8443:
 
 $sudo bash kasm_release/install.sh -L 8443
