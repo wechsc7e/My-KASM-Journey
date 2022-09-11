@@ -29,7 +29,7 @@ In the "Docker Exec Config (JSON)" section, add the following code:
 -----------
 {"first_launch":{"cmd":"bash -c 'sysctl net.ipv6.conf.all.disable_ipv6=0'","user":"root"}}
 -----------
-This tells KASM to disable IPv6 which also does not play well with OpenVPN
+This tells KASM to enable IPv6 which is needed to run OpenVPN
 
 NOTE: After you enter all the code and enable the instance, you will see a little warning triangle on the Kali box in the Workspaces area
 until KASM finishes downloading the image file and this could take a while depending on your server
