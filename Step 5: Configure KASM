@@ -1,0 +1,39 @@
+Ok, almost done here.  Go ahead and login to your KASM instance and you should be on the Admin page.  As a reminder, my goal here was to create a 
+secure connection to use Hack the Box while totally isolated from my home network.  To do this, we will be enabling the Kali Linux image and
+configuring it to work with the OpenVPN connection to the Hack the Box machines.  The problem with this is that KASM running Kali instances
+in a Docker container doesn't play well with OpenVPN and the settings need some tweaking as I'm about to show you.
+
+First step is to enable the Kali Linux image in KASM as it is turned off by default.  On the left side of your admin page, click on "Images"
+
+Scroll through the pages until you find Kali and then click on the 3 dots at the end to find the "Edit" command
+
+Click on the check box for "Enabled"
+
+Under the "Docker Run Config Override (JSON)" section, add the following code:
+------------
+{
+    "hostname":"kasm",
+    "user":"root",
+    "privileged" : true,
+    "devices":
+        [
+            "/dev/input/event0:/dev/input/event0:rwm",
+            "/dev/net/tun:/dev/net/tun:rwm"
+        ]
+}
+-----------
+This code auto starts the Kali instance as a root, privileged user, and creates the tun0 interface required for OpenVPN to work and
+communicate with Hack the Box
+
+In the "Docker Exec Config (JSON)" section, add the following code:
+-----------
+{"first_launch":{"cmd":"bash -c 'sysctl net.ipv6.conf.all.disable_ipv6=0'","user":"root"}}
+-----------
+This tells KASM to disable IPv6 which also does not play well with OpenVPN
+
+NOTE: After you enter all the code and enable the instance, you will see a little warning triangle on the Kali box in the Workspaces area
+until KASM finishes downloading the image file and this could take a while depending on your server
+
+At this point, you should now be able to download the OpenVPN file from hack the box and run it on your Kali instance
+
+That's it, you're done now!
