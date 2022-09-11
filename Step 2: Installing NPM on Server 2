@@ -6,7 +6,7 @@ To Install Docker
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
 
 This is the best tutorial I can offer you to walk you through the Docker Installation. Once you have Docker installed per the tutorial,
-you will also want to install the Docker Compose Plugin to compile the .yml setup files for tou NPM installation:
+you will also want to install the Docker Compose Plugin to compile the .yml setup files for your NPM installation:
 
 $sudo apt-get update
 $sudo apt-get install docker-compose-plugin
