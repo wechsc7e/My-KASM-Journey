@@ -1,7 +1,7 @@
 ------------------------------
 Configure SSL for Whole Domain
 ------------------------------
-To configure NPM with all the changes and subdomains we created, first you will click "Add New Proxy Host"
+To configure NPM with the subdomains we created, first you will click "Add New Proxy Host"
 
 When the dialog box comes up, type in the name of your domain (example.com) as the domain name and check the box for "Block Common Exploits"
 Use the "https" scheme and input your KASM servers IP address and use Port 443. Make sure it is available to the public with the last option box.
