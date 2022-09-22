@@ -1,3 +1,4 @@
+
 For my first project, I wanted to set up a secure, SSL encypted from end-to-end, KASM server to use as my Hack the Box station to use with their machines / labs..
 To do this, I used Linode to set up two servers, one to run NGINX Proxy Manger and another to host my production KASM instance.
 It took a while, with the help of YouTube and online forums, to navigate the challenges in making this happen and my hope is to make it easier on someone else.
